@@ -1,8 +1,20 @@
 name: Action Workflow
 
-on: 
-  repository_dispatch:
-    types: [build]
+on:
+  push:
+    branches:
+      - master
+      - 'feature/*'  # match feature/featA, feature/featB
+      - 'feature/**' # match feature/feat/A, feature/feat/B
+      - '!feature/featC' # ignore this branch
+    tags: # same ideia of branch
+      - "v1.*"
+    paths: # Define perform to the action based on chage file
+      - "**.js"
+      - "!file.js" # ignore change this files
+
+  #repository_dispatch:
+  #  types: [build]
   #schedule:
   #  - cron: "0/5 * * * *"
   #  - cron: "0/6 * * * *"
