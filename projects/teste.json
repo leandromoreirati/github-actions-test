@@ -1,0 +1,9 @@
+{
+  "id": "teste-app",
+  "type": "infra",
+  "feature": "teste",
+  "laguage": "hcl",
+  "description": "Repositório de teste",
+  "squad": "teste",
+  "namespace": "teste/teste"
+}
