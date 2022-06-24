@@ -1,5 +1,5 @@
 name: Context
-on: [pull_request]
+on: [pull]
 
 jobs:
   functions:
@@ -41,4 +41,3 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
-        
