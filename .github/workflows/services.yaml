@@ -1,9 +1,9 @@
-name: Container
+name: Service Container
 
 on: push
 
 jobs:
-  node-docer:
+  node-docker-service:
     runs-on: ubuntu-latest
     services:
       app:
