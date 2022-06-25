@@ -25,12 +25,12 @@ jobs:
       - name: list file
         run: |
             ls -l
-            chmod +x script.sh
+            chmod +x ./script.sh
             ls -l
       - name: Run a script
         uses: docker://node:12.14.1-alpine3.10
         with:
-          entrypoint: script.sh
+          entrypoint: ./script.sh
           args: "Some string"
       - name: send a slack message
         uses: docker://technosophos/slack-notify
