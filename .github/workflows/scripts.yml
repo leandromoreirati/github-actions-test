@@ -1,4 +1,4 @@
-name: Rur script in steps
+name: Run script in steps
 
 on: push
 
@@ -25,7 +25,7 @@ jobs:
       - name: Run a script
         uses: docker://node:12.14.1-alpine3.10
         with:
-          entrypoint: ./script.sh
+          entrypoint: bash ./script.sh
           args: "Some string"
       - name: send a slack message
         uses: docker://technosophos/slack-notify
