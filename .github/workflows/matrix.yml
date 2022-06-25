@@ -18,14 +18,3 @@ jobs:
           node-version: ${{ matrix.node_version }}
       - name: Log node version
         run: node -v
-
-  node-version:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Log node version
-        run: node -v
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 7
-      - name: Log node version
-        run: node -v
